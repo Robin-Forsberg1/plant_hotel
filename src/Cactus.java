@@ -7,7 +7,7 @@ public class Cactus extends Plant {
 
 
     public double calculateLiquidAmount() {
-        return PlantHotelConstants.CACTUS_CENTILITERS;
+        return PlantHotelConstants.CACTUS_LITERS;
     }
 
 
