@@ -5,12 +5,12 @@ public class Cactus extends Plant {
         super(name, height);
     }
 
-
+    @Override
     public double calculateLiquidAmount() {
         return PlantHotelConstants.CACTUS_LITERS;
     }
 
-
+    @Override
     public LiquidType getLiquidType() {
         return LiquidType.MINERAL_WATER;
     }

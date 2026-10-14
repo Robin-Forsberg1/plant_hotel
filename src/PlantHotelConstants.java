@@ -1,6 +1,6 @@
 public class PlantHotelConstants {
 
-    private PlantHotelConstants(){
+    private PlantHotelConstants() {
 
     }
 
@@ -15,12 +15,12 @@ public class PlantHotelConstants {
     public static final String LAURA_SEARCH = "laura";
     public static final String MEATLOAF_SEARCH = "meatloaf";
     public static final String OLOF_SEARCH = "olof";
-    public static final String EXIT= "exit";
+    public static final String EXIT = "exit";
 
     //
     public static final int INDEX_IGGE = 0;
     public static final int INDEX_LAURA = 1;
-    public static final int INDEX_MEATLOAF= 2;
+    public static final int INDEX_MEATLOAF = 2;
     public static final int INDEX_OLOF = 3;
 
     // Plant heights
@@ -48,6 +48,10 @@ public class PlantHotelConstants {
     public static final String YES = "yes";
     public static final String NO = "no";
 
+    public static final String RESULT_SEPARATOR = " - ";
+    public static final String LITER_UNIT = " liter";
+
+
     public static final String DIGIT_PATTERN = ".*\\d.*";
-    public static final String LETTER_PATTERN = ".*\\\\p{L}.*";
+    public static final String LETTER_PATTERN = ".*\\p{L}.*";
 }

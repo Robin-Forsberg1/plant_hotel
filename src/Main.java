@@ -77,15 +77,13 @@ public class Main {
                     System.out.println(PlantHotelConstants.AVAILABLE_PLANTS);
 
 
-
-
             }
+            if (selectedPlant != null) {
+                System.out.println(selectedPlant.getLiquidInformation());
+            }
+
         }
-
-            scanner.close();
-
-
-
+        scanner.close();
 
 
     }

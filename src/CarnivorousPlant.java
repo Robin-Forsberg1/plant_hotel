@@ -6,11 +6,12 @@ public class CarnivorousPlant extends Plant {
     }
 
 
+    @Override
     public double calculateLiquidAmount() {
-        return PlantHotelConstants.CARNIVOROUS_BASE + (PlantHotelConstants.CARNIVOROUS_FACTOR*getHeight());
+        return PlantHotelConstants.CARNIVOROUS_BASE + (PlantHotelConstants.CARNIVOROUS_FACTOR * getHeight());
     }
 
-
+    @Override
     public LiquidType getLiquidType() {
         return LiquidType.PROTEIN_DRINK;
     }

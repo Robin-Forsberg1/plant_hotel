@@ -1,4 +1,4 @@
-public class Plant {
+public abstract class Plant implements IPlant {
 
 
     private String name;
@@ -16,4 +16,19 @@ public class Plant {
     public double getHeight() {
         return height;
     }
+
+    public abstract double calculateLiquidAmount();
+
+    public abstract LiquidType getLiquidType();
+
+    public String getLiquidInformation() {
+        return getName()
+                + PlantHotelConstants.RESULT_SEPARATOR
+                + calculateLiquidAmount()
+                + PlantHotelConstants.LITER_UNIT
+                + PlantHotelConstants.RESULT_SEPARATOR
+                + getLiquidType();
+    }
+
+
 }
