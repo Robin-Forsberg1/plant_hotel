@@ -1,12 +1,13 @@
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Main {
     public static void main(String[] args) {
 
 
-        Scanner scanner = new Scanner(System.in);
+        //Scanner scanner = new Scanner(System.in);
         ArrayList<Plant> plants = new ArrayList<>();
 
         // Alla växter läggs in i lista.
@@ -20,12 +21,25 @@ public class Main {
         // While fortsätter tills användaren väljer att avsluta.
         while (running) {
 
-            System.out.println(PlantHotelConstants.QUESTION);
-            String input = scanner.nextLine().trim();
+            String input = JOptionPane.showInputDialog(
+                    PlantHotelConstants.QUESTION
+            );
+
+            //System.out.println(PlantHotelConstants.QUESTION);
+            //String input = scanner.nextLine().trim();
+
+            if (input == null) {
+                break;
+            }
+
+            input = input.trim();
 
             // kontrollerar om inmatningen är tom
             if (input.isEmpty()) {
-                System.out.println(PlantHotelConstants.EMPTY_INPUT);
+                //System.out.println(PlantHotelConstants.EMPTY_INPUT);
+                JOptionPane.showMessageDialog(
+                        null, PlantHotelConstants.EMPTY_INPUT
+                );
                 continue;
             }
 
@@ -34,20 +48,29 @@ public class Main {
             // hanterar avslutning
             if (searchName.equals(PlantHotelConstants.EXIT)) {
                 running = false;
-                System.out.println(PlantHotelConstants.EXIT_MESSAGE);
+                //System.out.println(PlantHotelConstants.EXIT_MESSAGE);
+                JOptionPane.showMessageDialog(
+                        null, PlantHotelConstants.EXIT_MESSAGE
+                );
                 continue;
             }
 
             // avvisar siffror
             if (input.matches(PlantHotelConstants.DIGIT_PATTERN)) {
-                System.out.println(PlantHotelConstants.INVALID_INPUT);
+                //System.out.println(PlantHotelConstants.INVALID_INPUT);
+                JOptionPane.showMessageDialog(
+                        null, PlantHotelConstants.INVALID_INPUT
+                );
                 continue;
             }
 
             // tillåter endast bokstäver
             // avisar siffror mellanslag och specialtecken
             if (!input.matches(PlantHotelConstants.LETTER_PATTERN)) {
-                System.out.println(PlantHotelConstants.INVALID_INPUT);
+                //System.out.println(PlantHotelConstants.INVALID_INPUT);
+                JOptionPane.showMessageDialog(
+                        null, PlantHotelConstants.INVALID_INPUT
+                );
                 continue;
             }
 
@@ -73,17 +96,26 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println(PlantHotelConstants.UNKNOWN_PLANT);
-                    System.out.println(PlantHotelConstants.AVAILABLE_PLANTS);
+                    //System.out.println(PlantHotelConstants.UNKNOWN_PLANT);
+                    //System.out.println(PlantHotelConstants.AVAILABLE_PLANTS);
+                    JOptionPane.showMessageDialog(
+                            null, PlantHotelConstants.UNKNOWN_PLANT
+                    );
+                    JOptionPane.showMessageDialog(
+                            null, PlantHotelConstants.AVAILABLE_PLANTS
+                    );
 
 
             }
             if (selectedPlant != null) {
-                System.out.println(selectedPlant.getLiquidInformation());
+                //System.out.println(selectedPlant.getLiquidInformation());
+                JOptionPane.showMessageDialog(
+                        null, selectedPlant.getLiquidInformation()
+                );
             }
 
         }
-        scanner.close();
+        //scanner.close();
 
 
     }
