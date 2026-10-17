@@ -12,6 +12,6 @@ public class Palm extends Plant {
 
     @Override
     public LiquidType getLiquidType() {
-        return LiquidType.TAP_WATER;
+        return LiquidType.kranvatten;
     }
 }

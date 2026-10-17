@@ -13,6 +13,6 @@ public class CarnivorousPlant extends Plant {
 
     @Override
     public LiquidType getLiquidType() {
-        return LiquidType.PROTEIN_DRINK;
+        return LiquidType.proteindryck;
     }
 }

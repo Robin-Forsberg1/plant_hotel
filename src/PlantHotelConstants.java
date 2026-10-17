@@ -15,9 +15,8 @@ public class PlantHotelConstants {
     public static final String LAURA_SEARCH = "laura";
     public static final String MEATLOAF_SEARCH = "meatloaf";
     public static final String OLOF_SEARCH = "olof";
-    public static final String EXIT = "exit";
 
-    //
+    // Switch case order
     public static final int INDEX_IGGE = 0;
     public static final int INDEX_LAURA = 1;
     public static final int INDEX_MEATLOAF = 2;
@@ -36,22 +35,20 @@ public class PlantHotelConstants {
     public static final double CACTUS_LITERS = 0.02;
 
     // User messages
-    public static final String WELCOME = "Welcome to Greenest Plant Hotel!";
-    public static final String QUESTION = "Which plant needs liquid?";
-    public static final String EMPTY_INPUT = "You must enter a plant name.";
-    public static final String UNKNOWN_PLANT = "This plant is not staying at the hotel.";
-    public static final String AVAILABLE_PLANTS = "Available plants: Igge, Laura, Meatloaf, Olof.";
-    public static final String INVALID_INPUT = "Invalid input. Please enter a plant name.";
-    public static final String EXIT_MESSAGE = "The program is closing.";
-    public static final String CONTINUE_QUESTION = "Would you like to serve another plant? (yes/no): ";
-    public static final String INVALID_ANSWER = "Please answer yes or no";
-    public static final String YES = "yes";
-    public static final String NO = "no";
+    public static final String WELCOME = "Välkommen till växthotellet Greenest!";
+    public static final String QUESTION = "Vilken växt ska få vätska?";
+    public static final String EMPTY_INPUT = "Du måste ange ett växtnamn.";
+    public static final String UNKNOWN_PLANT = "Den här växten bor inte på hotellet.";
+    public static final String AVAILABLE_PLANTS = "Tillgängliga växter: Igge, Laura, Meatloaf och Olof.";
+    public static final String INVALID_INPUT = "Ogiltig inmatning. Ange ett växtnamn.";
+    public static final String EXIT_MESSAGE = "Programmet avslutas.";
 
+
+    // Special units
     public static final String RESULT_SEPARATOR = " - ";
     public static final String LITER_UNIT = " liter";
 
-
+    // Digit and letter patterns
     public static final String DIGIT_PATTERN = ".*\\d.*";
     public static final String LETTER_PATTERN = ".*\\p{L}.*";
 }

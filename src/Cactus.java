@@ -12,6 +12,6 @@ public class Cactus extends Plant {
 
     @Override
     public LiquidType getLiquidType() {
-        return LiquidType.MINERAL_WATER;
+        return LiquidType.mineralvatten;
     }
 }
