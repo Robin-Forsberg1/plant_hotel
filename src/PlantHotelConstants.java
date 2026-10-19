@@ -41,7 +41,6 @@ public class PlantHotelConstants {
     public static final String UNKNOWN_PLANT = "Den här växten bor inte på hotellet.";
     public static final String AVAILABLE_PLANTS = "Tillgängliga växter: Igge, Laura, Meatloaf och Olof.";
     public static final String INVALID_INPUT = "Ogiltig inmatning. Ange ett växtnamn.";
-    public static final String EXIT_MESSAGE = "Programmet avslutas.";
 
 
     // Special units
