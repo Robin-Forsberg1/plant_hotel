@@ -8,7 +8,8 @@ public class Main {
 
         ArrayList<Plant> plants = new ArrayList<>();
 
-        // Alla växter läggs in i lista.
+        // Polyformism: listan har typen plant men kan innehålla
+        // olika subklasser, t.ex. Cactus, Palm, Carnivorousplant.
         plants.add(new Cactus(PlantHotelConstants.IGGE, PlantHotelConstants.IGGE_HEIGHT));
         plants.add(new Palm(PlantHotelConstants.LAURA, PlantHotelConstants.LAURA_HEIGHT));
         plants.add(new CarnivorousPlant(PlantHotelConstants.MEATLOAF, PlantHotelConstants.MEATLOAF_HEIGHT));
@@ -92,6 +93,11 @@ public class Main {
 
 
             }
+
+            // Polyformism: Samma metodanrop ger olika resultat
+            // beroende på vilken växttyp seclectedPlant refererar till.
+            // Metoderna calculateLiquidAmount() och getLiquidType()
+            // använder respektive underklass implemenation.
             if (selectedPlant != null) {
                 JOptionPane.showMessageDialog(
                         null, selectedPlant.getLiquidInformation()
